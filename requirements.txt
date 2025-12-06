@@ -1,0 +1,5 @@
+pandas
+dateparser
+python-dateutil
+thefuzz[speedup]
+
