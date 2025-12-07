@@ -1,0 +1,597 @@
+merchant,industry
+Walmart,Retail
+Target,Retail
+Costco,Retail
+Sam's Club,Retail
+Kroger,Supermarket
+Albertsons,Supermarket
+Safeway,Supermarket
+Publix,Supermarket
+H-E-B,Supermarket
+Whole Foods,Supermarket
+Trader Joe's,Supermarket
+Aldi,Supermarket
+Lidl,Supermarket
+Meijer,Supermarket
+WinCo Foods,Supermarket
+7-Eleven,Convenience Store
+Circle K,Convenience Store
+Casey's General Store,Convenience Store
+Sheetz,Convenience Store
+Wawa,Convenience Store
+QuikTrip,Convenience Store
+Speedway,Convenience Store
+Chevron,Gas Station
+Shell,Gas Station
+Exxon,Gas Station
+Mobil,Gas Station
+BP,Gas Station
+Phillips 66,Gas Station
+Valero,Gas Station
+Arco,Gas Station
+Murphy USA,Gas Station
+Costco Gas,Gas Station
+Starbucks,Coffee Shop
+Dunkin',Coffee Shop
+Peet's Coffee,Coffee Shop
+Tim Hortons,Coffee Shop
+Dutch Bros Coffee,Coffee Shop
+Caribou Coffee,Coffee Shop
+McDonald's,Fast Food
+Burger King,Fast Food
+Wendy's,Fast Food
+Taco Bell,Fast Food
+KFC,Fast Food
+Chick-fil-A,Fast Food
+Subway,Fast Food
+Domino's Pizza,Fast Food
+Pizza Hut,Fast Food
+Little Caesars,Fast Food
+Popeyes,Fast Food
+Chipotle Mexican Grill,Fast Casual
+Panera Bread,Fast Casual
+Shake Shack,Fast Casual
+Five Guys,Fast Casual
+Qdoba,Fast Casual
+Moe's Southwest Grill,Fast Casual
+Jersey Mike's Subs,Fast Casual
+Jimmy John's,Fast Casual
+Firehouse Subs,Fast Casual
+Panda Express,Fast Casual
+Noodles & Company,Fast Casual
+Raising Cane's,Fast Casual
+Wingstop,Fast Casual
+In-N-Out Burger,Fast Food
+Jack in the Box,Fast Food
+Carl's Jr.,Fast Food
+Hardee's,Fast Food
+Culver's,Fast Food
+Sonic Drive-In,Fast Food
+Whataburger,Fast Food
+Checkers,Fast Food
+Church's Chicken,Fast Food
+Bojangles,Fast Food
+El Pollo Loco,Fast Food
+Zaxby's,Fast Food
+Krispy Kreme,Bakery
+Auntie Anne's,Bakery
+Cinnabon,Bakery
+Dairy Queen,Dessert
+Baskin-Robbins,Dessert
+Cold Stone Creamery,Dessert
+Ben & Jerry's,Dessert
+Red Lobster,Restaurant
+Olive Garden,Restaurant
+Outback Steakhouse,Restaurant
+LongHorn Steakhouse,Restaurant
+Texas Roadhouse,Restaurant
+Chili's,Restaurant
+Applebee's,Restaurant
+Buffalo Wild Wings,Restaurant
+TGI Fridays,Restaurant
+The Cheesecake Factory,Restaurant
+IHOP,Restaurant
+Denny's,Restaurant
+Cracker Barrel,Restaurant
+Golden Corral,Restaurant
+Waffle House,Restaurant
+Carrabba's Italian Grill,Restaurant
+Maggiano's,Restaurant
+P.F. Chang's,Restaurant
+BJ's Restaurant & Brewhouse,Restaurant
+Ruby Tuesday,Restaurant
+Red Robin,Restaurant
+Yard House,Restaurant
+Fleming's Steakhouse,Restaurant
+Ruth's Chris Steak House,Restaurant
+Morton's Steakhouse,Restaurant
+Holiday Inn,Hotel
+Holiday Inn Express,Hotel
+Hilton,Hotel
+DoubleTree,Hotel
+Embassy Suites,Hotel
+Hampton Inn,Hotel
+Marriott,Hotel
+Courtyard by Marriott,Hotel
+Residence Inn,Hotel
+Sheraton,Hotel
+Westin,Hotel
+Hyatt,Hotel
+Hyatt Place,Hotel
+Comfort Inn,Hotel
+Comfort Suites,Hotel
+Quality Inn,Hotel
+Best Western,Hotel
+Super 8,Hotel
+Motel 6,Hotel
+Red Roof Inn,Hotel
+La Quinta,Hotel
+Extended Stay America,Hotel
+Four Seasons,Hotel
+Ritz-Carlton,Hotel
+Dollar Tree,Discount Retail
+Dollar General,Discount Retail
+Family Dollar,Discount Retail
+Five Below,Discount Retail
+TJ Maxx,Retail
+Marshalls,Retail
+HomeGoods,Retail
+Ross Dress for Less,Retail
+Burlington,Retail
+Macy's,Department Store
+Nordstrom,Department Store
+Nordstrom Rack,Department Store
+Kohl's,Department Store
+JCPenney,Department Store
+Sears,Department Store
+DSW,Shoes
+Famous Footwear,Shoes
+Foot Locker,Sporting Goods
+Champs Sports,Sporting Goods
+Dick's Sporting Goods,Sporting Goods
+Academy Sports,Sporting Goods
+Big 5 Sporting Goods,Sporting Goods
+Bed Bath & Beyond,Home Goods
+Bath & Body Works,Beauty
+Ulta Beauty,Beauty
+Sephora,Beauty
+Victoria's Secret,Apparel
+Pink,Apparel
+Gap,Apparel
+Old Navy,Apparel
+Banana Republic,Apparel
+American Eagle,Apparel
+Hollister,Apparel
+Abercrombie & Fitch,Apparel
+Aerie,Apparel
+Lululemon,Apparel
+Nike,Apparel
+Adidas,Apparel
+Under Armour,Apparel
+REI,Sporting Goods
+Bass Pro Shops,Sporting Goods
+Cabela's,Sporting Goods
+Office Depot,Office Supply
+OfficeMax,Office Supply
+Staples,Office Supply
+Best Buy,Electronics
+Apple Store,Electronics
+T-Mobile,Mobile Carrier
+Verizon Wireless,Mobile Carrier
+AT&T,Mobile Carrier
+Sprint,Mobile Carrier
+GameStop,Video Games
+PetSmart,Pet Store
+Petco,Pet Store
+Tractor Supply Co.,Hardware
+Ace Hardware,Hardware
+True Value,Hardware
+The Home Depot,Hardware
+Lowe's,Hardware
+Harbor Freight Tools,Hardware
+AutoZone,Auto Parts
+O'Reilly Auto Parts,Auto Parts
+Advance Auto Parts,Auto Parts
+NAPA Auto Parts,Auto Parts
+U-Haul,Rental
+The UPS Store,Shipping
+FedEx Office,Shipping
+FedEx,Shipping
+UPS,Shipping
+USPS,Shipping
+Walgreens,Pharmacy
+CVS,Pharmacy
+Rite Aid,Pharmacy
+GNC,Health
+Vitamin Shoppe,Health
+Planet Fitness,Fitness
+LA Fitness,Fitness
+Anytime Fitness,Fitness
+Crunch Fitness,Fitness
+24 Hour Fitness,Fitness
+Cost Cutters,Salon
+Great Clips,Salon
+Sport Clips,Salon
+Supercuts,Salon
+Regal Cinemas,Entertainment
+AMC Theatres,Entertainment
+Cinemark,Entertainment
+Topgolf,Entertainment
+Dave & Buster's,Entertainment
+Chuck E. Cheese,Entertainment
+Main Event,Entertainment
+Costco Business Center,Retail
+Fleet Farm,Retail
+Hy-Vee,Supermarket
+Giant Eagle,Supermarket
+Food Lion,Supermarket
+Piggly Wiggly,Supermarket
+Stater Bros,Supermarket
+Sprouts Farmers Market,Supermarket
+Vons,Supermarket
+Ralphs,Supermarket
+Smith's,Supermarket
+Fred Meyer,Supermarket
+Harris Teeter,Supermarket
+Giant Food,Supermarket
+Winn-Dixie,Supermarket
+Wegmans,Supermarket
+Market Basket,Supermarket
+Buc-ee's,Convenience Store
+Aldi Express,Supermarket
+Food4Less,Supermarket
+Save A Lot,Supermarket
+Brookshire's,Supermarket
+Food City,Supermarket
+Pavilions,Supermarket
+Shaw's,Supermarket
+Star Market,Supermarket
+Price Chopper,Supermarket
+Hannaford,Supermarket
+Big Y,Supermarket
+Coborn's,Supermarket
+Rouses,Supermarket
+Schnucks,Supermarket
+Harmons,Supermarket
+Festival Foods,Supermarket
+Weis Markets,Supermarket
+Price Rite,Discount Grocery
+Bravo Supermarkets,Supermarket
+Sedano’s Supermarket,Supermarket
+Fiesta Mart,Supermarket
+Supermercado El Rancho,Supermarket
+Superior Grocers,Supermarket
+El Super,Supermarket
+La Michoacana Meat Market,Supermarket
+Fresh Thyme,Supermarket
+Mother’s Market,Supermarket
+Natural Grocers,Supermarket
+Milam’s Market,Supermarket
+City Market,Supermarket
+King Soopers,Supermarket
+QFC,Supermarket
+Met Foods,Supermarket
+Key Food,Supermarket
+Food Universe,Supermarket
+Western Beef,Supermarket
+Morton Williams,Supermarket
+Gristedes,Supermarket
+C-Town,Supermarket
+Food Emporium,Supermarket
+Bravo Foods,Supermarket
+Sprain Brook Manor,Healthcare
+Firehouse Pantry,Convenience Store
+OnCue,Convenience Store
+GetGo,Convenience Store
+Stripes,Convenience Store
+Royal Farms,Convenience Store
+Kum & Go,Convenience Store
+Maverik,Convenience Store
+Pilot Flying J,Gas Station
+Love’s Travel Stop,Gas Station
+TravelCenters of America,Gas Station
+Thorntons,Gas Station
+RaceTrac,Gas Station
+RaceWay,Gas Station
+Sunoco,Gas Station
+Conoco,Gas Station
+Holiday Stationstores,Gas Station
+Kwik Trip,Gas Station
+Kwik Star,Gas Station
+Gulf Oil,Gas Station
+Sun Mart,Convenience Store
+Mapco,Convenience Store
+Huck’s Market,Convenience Store
+GPM Investments,Convenience Store
+Sbarro,Fast Food
+Papa John’s,Fast Food
+Hungry Howie’s,Fast Food
+Marco’s Pizza,Fast Food
+Papa Murphy’s,Fast Food
+Round Table Pizza,Fast Food
+PizzaRev,Fast Casual
+Blaze Pizza,Fast Casual
+MOD Pizza,Fast Casual
+Pieology,Fast Casual
+Sweetgreen,Fast Casual
+Cava,Fast Casual
+Tender Greens,Fast Casual
+Chopt,Fast Casual
+Saladworks,Fast Casual
+Tropical Smoothie Cafe,Smoothies
+Smoothie King,Smoothies
+Robeks,Smoothies
+Jamba,Smoothies
+A&W Restaurants,Fast Food
+Baskin-Robbins,Dessert
+Friendly’s,Restaurant
+Perkins Restaurant & Bakery,Restaurant
+Huddle House,Restaurant
+Village Inn,Restaurant
+Shari’s Cafe,Restaurant
+Black Bear Diner,Restaurant
+Egg Harbor Cafe,Restaurant
+First Watch,Restaurant
+Another Broken Egg Cafe,Restaurant
+Original Pancake House,Restaurant
+Maggie Moo’s,Dessert
+Marble Slab Creamery,Dessert
+Cook Out,Fast Food
+Del Taco,Fast Food
+Runza,Fast Food
+Farmer Boys,Fast Food
+Tijuana Flats,Fast Casual
+Pollo Tropical,Fast Casual
+Portillo’s,Fast Casual
+Freddy's Frozen Custard,Fast Casual
+Habit Burger Grill,Fast Casual
+Papa Gino’s,Fast Food
+Smashburger,Fast Casual
+Einstein Bros. Bagels,Cafe
+Bruegger's Bagels,Cafe
+Corner Bakery Cafe,Cafe
+Au Bon Pain,Cafe
+Café Rio,Fast Casual
+Zoe’s Kitchen,Fast Casual
+Boston Market,Fast Casual
+Dickey’s Barbecue Pit,Fast Casual
+Famous Dave’s,Restaurant
+Logan’s Roadhouse,Restaurant
+O’Charley’s,Restaurant
+Bahama Breeze,Restaurant
+Seasons 52,Restaurant
+Bonefish Grill,Restaurant
+Fogo de Chão,Restaurant
+Texas de Brazil,Restaurant
+Benihana,Restaurant
+Sushi Roku,Restaurant
+Nobu,Restaurant
+Umami Burger,Fast Casual
+Shake Shack,Fast Casual
+White Castle,Fast Food
+Steak 'n Shake,Fast Food
+Auntie Anne’s,Bakery
+Tim Hortons,Coffee
+Biggby Coffee,Coffee Shop
+Scooter’s Coffee,Coffee Shop
+Coffee Bean & Tea Leaf,Coffee Shop
+It’s A Grind Coffee,Coffee Shop
+QuickChek,Convenience Store
+Ingles Markets,Supermarket
+Grocery Outlet,Discount Grocery
+99 Cents Only Stores,Discount Retail
+Big Lots,Discount Retail
+Ocean State Job Lot,Discount Retail
+Gabriel Brothers (Gabe’s),Retail
+Stein Mart,Retail
+Tuesday Morning,Retail
+At Home,Home Goods
+HomeSense,Home Goods
+Christmas Tree Shops,Home Goods
+Ashley HomeStore,Furniture
+Rooms To Go,Furniture
+Raymour & Flanigan,Furniture
+Bob’s Discount Furniture,Furniture
+Mattress Firm,Furniture
+Sleep Number,Furniture
+Havertys,Furniture
+Levin Furniture,Furniture
+Ashley Outlet,Furniture
+IKEA,Furniture
+Restoration Hardware,Home Goods
+Crate & Barrel,Home Goods
+Pottery Barn,Home Goods
+West Elm,Home Goods
+Anthropologie,Apparel
+Urban Outfitters,Apparel
+Free People,Apparel
+Uniqlo,Apparel
+Zara,Apparel
+H&M,Apparel
+Primark,Apparel
+Buckle,Apparel
+Francesca’s,Apparel
+J.Jill,Apparel
+Talbots,Apparel
+Lane Bryant,Apparel
+Torrid,Apparel
+Loft,Apparel
+Ann Taylor,Apparel
+Skechers,Shoes
+Journeys,Shoes
+Chico’s,Apparel
+White House Black Market,Apparel
+Hot Topic,Apparel
+Spencer’s Gifts,Specialty Retail
+Claire’s,Jewelry
+Pandora Jewelry,Jewelry
+Kay Jewelers,Jewelry
+Jared,Jewelry
+Zales,Jewelry
+Helzberg Diamonds,Jewelry
+Petland,Pet Store
+Hollywood Feed,Pet Store
+Orscheln Farm & Home,Hardware
+Rural King,Hardware
+Do it Best,Hardware
+Menards,Hardware
+Golf Galaxy,Sporting Goods
+Hibbett Sports,Sporting Goods
+Public Lands,Sporting Goods
+Staples,Office Supplies
+Micro Center,Electronics
+Fry’s Electronics,Electronics
+B&H Photo Video,Electronics
+Newegg,Online Retail
+Amazon,Online Retail
+eBay,Online Retail
+Wayfair,Online Retail
+Overstock,Online Retail
+Chewy,Online Retail
+Zappos,Online Retail
+Shipt,Grocery Delivery
+Instacart,Grocery Delivery
+DoorDash,Delivery
+Uber Eats,Delivery
+Grubhub,Delivery
+Postmates,Delivery
+Lyft,Rideshare
+Uber,Rideshare
+Greyhound,Transportation
+Amtrak,Transportation
+Carter’s,Apparel
+OshKosh B’gosh,Apparel
+The Children’s Place,Apparel
+JanSport,Apparel
+Columbia Sportswear,Apparel
+Patagonia,Apparel
+North Face,Apparel
+LL Bean,Apparel
+Costco Optical,Health
+LensCrafters,Health
+Pearle Vision,Health
+America’s Best Contacts & Eyeglasses,Health
+Warby Parker,Health
+For Eyes,Health
+Visionworks,Health
+Aspen Dental,Dental
+Western Dental,Dental
+Bright Now Dental,Dental
+Heartland Dental,Dental
+Walgreens Clinic,Healthcare
+CVS MinuteClinic,Healthcare
+Quest Diagnostics,Healthcare
+Labcorp,Healthcare
+Kaiser Permanente,Healthcare
+Sutter Health,Healthcare
+Cleveland Clinic,Healthcare
+Mayo Clinic,Healthcare
+Baylor Scott & White,Healthcare
+Banner Health,Healthcare
+UnityPoint Health,Healthcare
+WellSpan Health,Healthcare
+Goodwill,Resale
+Salvation Army Thrift Store,Resale
+Habitat ReStore,Resale
+Savers,Resale
+Buffalo Exchange,Resale
+Plato’s Closet,Resale
+Once Upon a Child,Resale
+Uptown Cheapskate,Resale
+Crossroads Trading Co.,Resale
+Music & Arts,Music
+Guitar Center,Music
+Sam Ash Music,Music
+Joann Fabrics,Crafts
+Michael’s,Crafts
+Hobby Lobby,Crafts
+Dollar Book Swap,Books
+Books-A-Million,Books
+Barnes & Noble,Books
+Half Price Books,Books
+FedEx Ship Center,Shipping
+UPS Customer Center,Shipping
+AAA,Auto Services
+Firestone Complete Auto Care,Auto Services
+Midas,Auto Services
+Meineke,Auto Services
+Jiffy Lube,Auto Services
+Valvoline Instant Oil Change,Auto Services
+Pep Boys,Auto Services
+Mr. Tire,Auto Services
+Big O Tires,Auto Services
+NTB (National Tire & Battery),Auto Services
+Discount Tire,Auto Services
+Les Schwab Tire Center,Auto Services
+Monro Auto Service,Auto Services
+Enterprise Rent-A-Car,Rental
+Hertz,Rental
+Budget Rent a Car,Rental
+Avis,Rental
+National Car Rental,Rental
+Alamo Rent A Car,Rental
+Thrifty Car Rental,Rental
+Dollar Rent A Car,Rental
+Redbox,Entertainment
+GameFly,Entertainment
+Ticketmaster,Entertainment
+StubHub,Entertainment
+Six Flags,Entertainment
+Cedar Fair,Entertainment
+Universal Studios,Entertainment
+Disneyland,Entertainment
+Walt Disney World,Entertainment
+Paramount Parks,Entertainment
+Smithsonian,Entertainment
+REI Co-op,Outdoors
+Bass Pro Shops,Outdoors
+Cabela’s,Outdoors
+Sportsman’s Warehouse,Outdoors
+Hibbett Sports,Sporting Goods
+Duluth Trading Co.,Apparel
+CarMax,Auto Sales
+Carvana,Auto Sales
+Vroom,Auto Sales
+Rooms To Go Kids,Furniture
+Ashley Kids,Furniture
+Ashley Outlet,Furniture
+Sleep Number Store,Home Goods
+Mattress Warehouse,Furniture
+Sherwin-Williams,Home Improvement
+Benjamin Moore,Home Improvement
+Floor & Decor,Home Improvement
+Carter Lumber,Home Improvement
+84 Lumber,Home Improvement
+Tractor Supply Co.,Farm & Home
+Northern Tool,Hardware
+Fastenal,Industrial Supply
+Grainger,Industrial Supply
+Uline,Industrial Supply
+Staples Print Center,Printing
+FedEx Print & Go,Printing
+Minuteman Press,Printing
+Sir Speedy,Printing
+AlphaGraphics,Printing
+Regus,Office Services
+WeWork,Office Services
+Sheraton Suites,Hotel
+Four Points by Sheraton,Hotel
+Hyatt Regency,Hotel
+Omni Hotels,Hotel
+Kimpton Hotels,Hotel
+Drury Inn & Suites,Hotel
+MGM Grand,Hotel
+Caesars Palace,Hotel
+Harrah’s,Hotel
+Horseshoe Casino,Entertainment
+Encore Boston Harbor,Entertainment
+JetBlue,Airline
+Delta Air Lines,Airline
+United Airlines,Airline
+American Airlines,Airline
+Southwest Airlines,Airline
+Alaska Airlines,Airline
+Frontier Airlines,Airline
+Spirit Airlines,Airline
+Hawaiian Airlines,Airline
+Sun Country Airlines,Airline
