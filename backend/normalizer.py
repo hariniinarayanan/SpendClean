@@ -106,6 +106,11 @@ def clean_dataframe(df):
     rows = []
 
     for index, row in df.iterrows():
+
+        # if row has all empty cells are passed in, skip processing row
+        if all(pd.isna(cell) or str(cell).strip() == "" for cell in row):
+            continue
+
         detected = {"date": None, "merchant": None, "normalized company name": None, "industry": None, "amount": None, "currency": None, "amount in USD": None}
         
         # detect each cell independently
@@ -134,23 +139,33 @@ def clean_dataframe(df):
         else:
             detected["industry"] = "UNKNOWN"
         
+        # if no date detected in the row passed in
         if not detected["date"]:
             detected["date"] = "none"
-        
-        # add converted amount
-        if detected["amount"] and detected["currency"]:
-            detected["amount in USD"] = currency_conversion.convert_currency(detected["currency"], "USD", detected["amount"])
-        else:
-            detected["amount in USD"] = None
 
         rows.append(detected)
 
+    # create data frame of all cleaned rows
     clean_df = pd.DataFrame(rows)
 
-    # if currency missing, fill most common
-    if clean_df["currency"].isna().any():
-        common_currency = clean_df["currency"].mode()[0]
-        clean_df["currency"] = clean_df["currency"].fillna(common_currency)
+    # if the currency missing in any row, fill it with the most common currency
+    if not clean_df.empty and clean_df["currency"].isna().any():
+        mode_values = clean_df["currency"].mode()
+        if not mode_values.empty:
+            common_currency = clean_df["currency"].mode()[0]
+            clean_df["currency"] = clean_df["currency"].fillna(common_currency)
+
+    # convert all amounts to USD and add to a new column
+    if not clean_df.empty:
+        amount_usd = []
+        for i, row in clean_df.iterrows():
+            if pd.notna(row["amount"]) and pd.notna(row["currency"]):
+                converted = currency_conversion.convert_currency(row["currency"], "USD", row["amount"])
+                amount_usd.append(converted)
+            else:
+                amount_usd.append(None)
+        clean_df["amount in USD"] = amount_usd
+
 
     return clean_df
 
@@ -165,18 +180,30 @@ def print_file(input_path):
                break
            print(line, end="")
    print ("\n")
-
-
+    
 def normalize_csv(input_path):
    print ("\nProcessing input file: ", input_path)
-   
  
    print_file(input_path)
-  
    output_csv_path = "data/cleaned_data.csv"
    output_txt_path = "data/cleaned_data.txt"
-   df = pd.read_csv(input_path, header=None, on_bad_lines="skip",  skipinitialspace=True)
-   clean_df = clean_dataframe(df)
+
+
+    # if input csv is completely empty, return empty dataframe
+   try:
+       df = pd.read_csv(input_path, on_bad_lines="skip",  skipinitialspace=True)
+   except:
+       df = pd.DataFrame()
+
+    # if csv file is only empty lines, create clenaed csv file with just the header
+   if df.empty:
+        columns = ["date", "merchant", "normalized company name", "industry",
+                   "amount", "currency", "amount in USD"]
+        clean_df = pd.DataFrame(columns=columns)
+   else:
+        clean_df = clean_dataframe(df)
+
+
    print ("First few lines of the cleaned file...")
    print ("--------------------------------------")
    print(clean_df.head(10))

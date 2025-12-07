@@ -2,7 +2,8 @@ import requests
 
 def convert_currency(from_currency, to_currency, amount):
     # use for testing to avoid maxing api calls:
-    # return amount 
+    # NEED TO REVERT BEFORE COMMITTING
+    return amount 
 
     # free key
     api_key = "239d02e45417bf93b2f8fb06"

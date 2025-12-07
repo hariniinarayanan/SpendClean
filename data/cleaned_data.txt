@@ -1,6 +1,19 @@
-+---+---------------------+-------------------+-------------------------+-------------+--------+----------+---------------+
-|   |        date         |     merchant      | normalized company name |  industry   | amount | currency | amount in USD |
-+---+---------------------+-------------------+-------------------------+-------------+--------+----------+---------------+
-| 0 | 2023-01-01 00:00:00 | Uber Technologies |          UBER           |  RIDESHARE  |  12.0  |   INR    |    0.13332    |
-| 1 | 2025-12-22 00:00:00 |       Exxon       |          EXXON          | GAS STATION |  0.0   |   USD    |      nan      |
-+---+---------------------+-------------------+-------------------------+-------------+--------+----------+---------------+
++----+---------------------+-----------------------+-------------------------+-------------------+--------+----------+---------------+
+|    |        date         |       merchant        | normalized company name |     industry      | amount | currency | amount in USD |
++----+---------------------+-----------------------+-------------------------+-------------------+--------+----------+---------------+
+| 0  | 2025-12-08 00:00:00 |      Whole Foods      |       WHOLE FOODS       |    SUPERMARKET    | 99.99  |   EUR    |  116.438355   |
+| 1  | 2025-12-09 00:00:00 |     Trader Joe's      |      TRADER JOE'S       |    SUPERMARKET    |  nan   |   USD    |      nan      |
+| 2  | 2025-12-10 00:00:00 |         Aldi          |          ALDI           |    SUPERMARKET    |  42.5  |   JPY    |   0.2738275   |
+| 3  | 2025-12-12 00:00:00 |        Meijer         |         MEIJER          |    SUPERMARKET    |  70.0  |   USD    |     70.0      |
+| 4  | 2025-12-13 00:00:00 |      WinCo Foods      |       WINCO FOODS       |    SUPERMARKET    |  0.0   |   USD    |      0.0      |
+| 5  | 2025-12-14 00:00:00 |       7-Eleven        |        7-ELEVEN         | CONVENIENCE STORE |  10.5  |   USD    |     10.5      |
+| 6  | 2025-12-16 00:00:00 | Casey's General Store |  CASEY'S GENERAL STORE  | CONVENIENCE STORE | 15.25  |   USD    |     15.25     |
+| 7  | 2025-12-17 00:00:00 |        Sheetz         |         SHEETZ          | CONVENIENCE STORE |  18.0  |   USD    |     18.0      |
+| 8  | 2025-12-17 00:00:00 |         Wawa          |          WAWA           | CONVENIENCE STORE |  22.4  |   USD    |     22.4      |
+| 9  | 2025-12-18 00:00:00 |       QuikTrip        |        QUIKTRIP         | CONVENIENCE STORE |  25.5  |   USD    |     25.5      |
+| 10 | 2025-12-19 00:00:00 |       Speedway        |        SPEEDWAY         | CONVENIENCE STORE |  nan   |   USD    |      nan      |
+| 11 | 2025-12-20 00:00:00 |        Chevron        |         CHEVRON         |    GAS STATION    |  30.0  |   USD    |     30.0      |
+| 12 | 2025-12-21 00:00:00 |         Shell         |          SHELL          |    GAS STATION    |  35.0  |   USD    |     35.0      |
+| 13 | 2023-01-01 00:00:00 |   Uber Technologies   |          UBER           |     RIDESHARE     |  12.0  |   INR    |    0.13332    |
+| 14 | 2025-12-22 00:00:00 |         Exxon         |          EXXON          |    GAS STATION    |  0.0   |   USD    |      0.0      |
++----+---------------------+-----------------------+-------------------------+-------------------+--------+----------+---------------+

@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 import dateparser
@@ -8,7 +9,13 @@ from backend import currency_conversion
 from backend import normalizer
 
 def aggregate_data(input_csv):
+    
     input_data = pd.read_csv(input_csv)
+
+    # if the input file is only the header, then skip processing
+    if len(input_data) <= 1:
+        print("\nCleaned Output File is Empty\n")
+        return
 
     # group by "industry" columns
     industry_groups = input_data.groupby("industry")["amount in USD"].sum()
