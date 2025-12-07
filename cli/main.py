@@ -1,4 +1,20 @@
+import argparse
 from backend import normalizer
 
+DEFAULT_FILE = "data/messy_data.csv"
+
+def main():
+    parser = argparse.ArgumentParser(description="Clean a messy CSV file")
+    parser.add_argument(
+        "input_file", 
+        nargs="?",  # Makes the argument optional
+        default=DEFAULT_FILE,  # Default file if none is provided
+        help=f"Path to the CSV file to clean (default: {DEFAULT_FILE})"
+    )
+    args = parser.parse_args()
+
+    normalizer.normalize_csv(args.input_file)
+
+
 if __name__ == "__main__":
-    normalizer.normalize_csv()
+    main()

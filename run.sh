@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $# -ge 1 ]; then
+    INPUT_FILE="$1"
+else
+    INPUT_FILE="$DEFAULT_FILE"
+fi
+
 echo "=== Smart Financial Parser ==="
 
 # Go to project root (location of this script)
@@ -17,12 +23,12 @@ source venv/bin/activate
 
 # Upgrade pip & install dependencies
 echo "Installing dependencies..."
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+python3 -m pip install --upgrade pip
+python3 -m pip install -r requirements.txt
 
 # Run the CLI
 echo "Running parser..."
-python -m cli.main
+python3 -m cli.main $INPUT_FILE
 
 # Deactivate venv
 echo "Deactivating virtual environment..."
