@@ -1,5 +1,6 @@
 import argparse
 from backend import normalizer
+from backend import aggregate
 
 DEFAULT_FILE = "data/messy_data.csv"
 
@@ -14,6 +15,8 @@ def main():
     args = parser.parse_args()
 
     normalizer.normalize_csv(args.input_file)
+    aggregate.aggregate_data("data/cleaned_data.csv")
+    
 
 
 if __name__ == "__main__":

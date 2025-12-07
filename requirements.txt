@@ -2,4 +2,6 @@ pandas
 dateparser
 python-dateutil
 thefuzz[speedup]
+tabulate
+requests
 
