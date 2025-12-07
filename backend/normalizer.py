@@ -3,16 +3,28 @@ import numpy as np
 import dateparser
 import re
 from thefuzz import process
+from tabulate import tabulate
+from backend import currency_conversion
 
 
 # to identify merchants
-MERCHANT_DF = pd.read_csv("/Users/harininarayanan/Documents/Projects/SpendClean/databases/merchants.csv")
+MERCHANT_DF = pd.read_csv("databases/merchants.csv")
 MERCHANT_LIST = MERCHANT_DF['merchant'].dropna().astype(str).str.upper().tolist()
 MERCHANT_INDUSTRY = MERCHANT_DF.set_index(MERCHANT_DF['merchant'].astype(str).str.upper())['industry'].astype(str).str.upper().to_dict()
 
 # to identify currencies
-CURRENCY_SYMBOLS = {"$": "USD", "€": "EUR", "£": "GBP"}
-KNOWN_CURRENCIES = ["USD", "EUR", "GBP", "CAD", "AUD", "INR", "JPY"]
+currency_df = pd.read_csv("databases/currencies.csv")
+CURRENCY_SYMBOLS = {str(row["symbol"]): row["currency"] 
+                    for _, row in currency_df.iterrows() if pd.notna(row["symbol"]) and row["symbol"] != ""}
+# many currencies use the same symbol, in this case we are choosing these as the most common defaults but there are many duplicates
+CURRENCY_SYMBOLS.update({
+    "$": "USD",
+    "€": "EUR",
+    "£": "GBP"
+})
+KNOWN_CURRENCIES = set(currency_df["currency"].dropna().astype(str).str.upper())
+ALL_SYMBOLS_REGEX = "[" + "".join(re.escape(s) for s in CURRENCY_SYMBOLS.keys()) + "]"
+
 
 def is_date(value):
     if not isinstance(value, str):
@@ -30,7 +42,7 @@ def is_amount(value):
     if not isinstance(value, str):
         return False
     v = value.strip()
-    return bool(re.match(r"^[£€$]?\s*\d+([.,]\d+)?$", v))
+    return bool(re.match(rf"^{ALL_SYMBOLS_REGEX}?\s*\d*([.,]\d+)?$", v))
 
 def clean_date(value):
     return dateparser.parse(value)
@@ -50,6 +62,7 @@ def clean_merchant(value, threshold = 90):
     cleaned = " ".join(cleaned.split())
     cleaned = cleaned.upper()
     match, score = process.extractOne(cleaned, MERCHANT_LIST)
+    # increase threshold to avoid normalizing name to wrong company
     if score >= threshold:
         return match
     else:
@@ -72,20 +85,20 @@ def detect_cell(cell):
         return ("currency", cell_str, None)
     
     # if amount
-    amount_match = re.match(r"^(?P<symbol>[£€$])?\s*(?P<number>\d*\.?\d+)?$", cell_str.replace(",", ""))
-
+    amount_match = re.match(rf"^(?P<symbol>{ALL_SYMBOLS_REGEX})?\s*(?P<number>\d*\.?\d+)?$", cell_str.replace(",", ""))
     if amount_match:
         symbol = amount_match.group("symbol")
         number = amount_match.group("number")
         # if currency symbol but no amount
         if symbol and not number:
             return ("amount", 0.0, CURRENCY_SYMBOLS.get(symbol))
-        # if amount
+        # if amount symbol or just amount
         if number:
             amount = float(number)
             currency = CURRENCY_SYMBOLS.get(symbol) if symbol else None
             return ("amount", amount, currency)
 
+    # otherwise, merchant because merchant names are most ambiguous
     return ("merchant", cell_str, None)
 
 def clean_dataframe(df):
@@ -93,14 +106,14 @@ def clean_dataframe(df):
     rows = []
 
     for index, row in df.iterrows():
-        detected = {"date": None, "merchant": None, "normalized company name": None, "industry": None, "amount": None, "currency": None}
+        detected = {"date": None, "merchant": None, "normalized company name": None, "industry": None, "amount": None, "currency": None, "amount in USD": None}
         
         # detect each cell independently
         for cell in row:
             ftype, cleaned_value, extra_currency = detect_cell(cell)
 
             if ftype != "invalid":
-                if ftype == "merchant" and cleaned_value is not None:
+                if ftype == "merchant" and cleaned_value is not None and not detected["merchant"]:
                     detected["merchant"] = cleaned_value
                     detected["normalized company name"] = clean_merchant(cleaned_value)
                 elif detected[ftype] is None:
@@ -113,13 +126,23 @@ def clean_dataframe(df):
                 # if extra currency from amount symbol, fill currency if empty
                 if extra_currency:
                     detected["currency"] = extra_currency
-                    
+        
+        # add industry
         normalized_merch = detected["normalized company name"]
         if normalized_merch:
             detected["industry"] = MERCHANT_INDUSTRY.get(normalized_merch.upper(), "UNKNOWN")
         else:
             detected["industry"] = "UNKNOWN"
         
+        if not detected["date"]:
+            detected["date"] = "none"
+        
+        # add converted amount
+        if detected["amount"] and detected["currency"]:
+            detected["amount in USD"] = currency_conversion.convert_currency(detected["currency"], "USD", detected["amount"])
+        else:
+            detected["amount in USD"] = None
+
         rows.append(detected)
 
     clean_df = pd.DataFrame(rows)
@@ -131,18 +154,35 @@ def clean_dataframe(df):
 
     return clean_df
 
+def print_file(input_path):
+   print ("\n\nFirst few lines of the input file...")
+   print ("--------------------------------------")
+   n = 10  # number of lines you want
+   with open(input_path, "r") as f:
+       for i in range(n):
+           line = f.readline()
+           if not line:   # stop if the file is shorter than n lines
+               break
+           print(line, end="")
+   print ("\n")
+
+
 def normalize_csv(input_path):
-    print ("\n===================================================")
-    print ("processing input file: ", input_path)
-    print ("===================================================")
-    output_path = "data/cleaned_data.csv"
-    df = pd.read_csv(input_path, header=0, on_bad_lines="skip",  skipinitialspace=True)
-    clean_df = clean_dataframe(df)
-    clean_df.to_csv(output_path, index=False)
-    print ("\n\nFirst few lines of the cleaned file...")
-    print ("--------------------------------------")
-    print(clean_df.head(15))
-    print ("\n")
-    print ("===================================================")
-    print(f"Cleaned file saved to {output_path}")
-    print ("===================================================")
+   print ("\nProcessing input file: ", input_path)
+   
+ 
+   print_file(input_path)
+  
+   output_csv_path = "data/cleaned_data.csv"
+   output_txt_path = "data/cleaned_data.txt"
+   df = pd.read_csv(input_path, header=None, on_bad_lines="skip",  skipinitialspace=True)
+   clean_df = clean_dataframe(df)
+   print ("First few lines of the cleaned file...")
+   print ("--------------------------------------")
+   print(clean_df.head(10))
+   clean_df.to_csv(output_csv_path, index=False)
+   with open(output_txt_path, "w") as f:
+       f.write(tabulate(clean_df, headers="keys", tablefmt="pretty"))
+   print ("\n")
+   print(f"Cleaned file saved to {output_txt_path}")
+   
