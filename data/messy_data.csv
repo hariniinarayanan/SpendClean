@@ -1,6 +1,54 @@
+date, merchant, amount, currency
+8 Dec 2025,Starbucks,abc,EUR
+2025-12-29,Dunkin',5.5,USD
+12/30/2025,Peet's Coffee,$6.75
+USD,2025/12/31,Tim Hortons,
+2026-01-01,Dutch Bros Coffee,7.50,usd
+01/02/2026,McDonald's,$8.25,USD
+2026-01-03,Burger King,9
+03-Jan-2026,Wendy's,$10.50,USD
+11.25,2026/01/04,Taco Bell
+01/05/2026,KFC,$12.75,EUR
+2026-01-06,Chick-fil-A,13.50
+06/01/2026,Subway,$14.00,USD
+2026-01-07,Domino's Pizza,15.25,USD
+USD,07-01-2026,Pizza Hut,$16.75
+2026.01.08,Little Caesars,17.50
+2026-01-09,Popeyes,$18.25,USD
+09/01/2026,Chipotle Mexican Grill,19,usd
+2026-01-10,Panera Bread,$20.00
+€5.50,2026-01-11,Starbucks,USD
+2026-01-12,"Trader Joe's",,$
+,Unknown Merchant,25.50,GBP
+2026-01-14,7-Eleven,-10,USD
+2026/01/15,Costco,abc,JPY
+23/12/2025,BP,55.10,usd
+EUR,24-12-2025,Phillips 66,60
+2025.12.25,Valero,$65.75,USD
+Arco,70.00,2025-12-26,US
+01/02/2023,UBER EATS,€8.50,EUR
+2023/03/05,Starbucks Coffee,$5.25,
+Mar 7 2023,STRBUCKS,   6 ,USD, EUR
+2023.04.01,Amazon Marketplace,£15.00,GBP
+GBP, 2024-9-5, My Company, $
+1-2-2015, HEB, 14, USD
+2025-12-01,Walmart,$120.50,USD
+USD,12/02/2025,Target,45.75
+
+Dec 3 2025,Costco,89.99,EUR
+Kroger,2025/12/04,$,USD
+2025-12-05,Albertsons,75.00,US
+12-06-2025,,35.25,USD
+$52.10,2025-12-07,Publix,USD
+07/12/2025,H-E-B,60,USD
+2023-01-01,UBER *TRIP,10.23,JPY
+50.25,2025-12-23,Mobil,CAD
+12/27/2025,Murphy USA,75,USD
 Costco Gas,80.50,2025-12-28,JPY
 2025.12.08,Whole Foods,99.99,EUR
 2025-12-09,Trader Joe's,abc,USD
+Dec 22 2025,Exxon,$,AUD
+1-5-2015 12:03:34, Uber, 10, USD
 42.50,2025/12/10,Aldi,JPY
 Dec 11, 2025,Lidl,$58.30,USD
 70,2025-12-12,Meijer,usd
@@ -14,4 +62,3 @@ QuikTrip,25.50,2025-12-18,eur
 USD,20-12-2025,Chevron,$30.00
 2025/12/21,Shell,35,USD
 Jan 1st 23,Uber Technologies, 12.00 , INR
-Dec 22 2025,Exxon,$,AUD

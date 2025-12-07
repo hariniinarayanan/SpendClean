@@ -1,6 +1,7 @@
 import argparse
 from backend import normalizer
 from backend import aggregate
+from backend import analyzer
 
 DEFAULT_FILE = "data/messy_data.csv"
 
@@ -16,7 +17,7 @@ def main():
 
     normalizer.normalize_csv(args.input_file)
     aggregate.aggregate_data("data/cleaned_data.csv")
-    
+    analyzer.generate_spending_report("data/cleaned_data.csv")
 
 
 if __name__ == "__main__":

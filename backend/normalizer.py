@@ -188,7 +188,6 @@ def normalize_csv(input_path):
    output_csv_path = "data/cleaned_data.csv"
    output_txt_path = "data/cleaned_data.txt"
 
-
     # if input csv is completely empty, return empty dataframe
    try:
        df = pd.read_csv(input_path, on_bad_lines="skip",  skipinitialspace=True)
