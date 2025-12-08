@@ -9,7 +9,7 @@ SpendClean is a smart financial parser and analyzer designed to help users manag
 - **Data Analysis**: Provides insights and visualizations of spending habits.
 - **Command-Line Interface**: Easy to use through CLI for quick access to functionalities.
 
-## Installation
+### Installation
 To install SpendClean, follow these steps:
 1. Clone the repository
 2. Navigate to the project directory (SpendClean)
@@ -23,7 +23,7 @@ To install SpendClean, follow these steps:
    ./run.sh {PATH_TO_INPUT_CSV}
    ```
 
-## Directory Structure
+### Directory Structure
 The directory is structured as shown:
 ```
 SpendClean/
@@ -67,8 +67,8 @@ For parsing, normalizing, and analyzing the dataset, I utilized the following to
   * *Merchant to Industry Classification* : I used another database to provide a mapping of merchants to their respective industries. For example, identifying that transactions from "UBER" fall under the "Transportation" category. This classification helps in better understanding spending patterns.
 - **APIs**: 
   I integrated APIs to enhance the project's functionality:
-  * *OpenAI API* : This API was used for conducting complex financial analyses on the cleaned data. By prompting the API, I was able to generate insights, identify trends, and categorize expenses based on historical data patterns. **Requires an OpenAI API private key to successfully retrieve the spending analysis.**
-  * *Currency Rate Conversion API* : I utilized an API to fetch real-time currency conversion rates. This allows the tool to convert amounts into a standard currency format, aiding in accurate financial reporting and analysis. For instance, if a transaction is in EUR, it can be converted to USD based on the latest exchange rates, ensuring a consistent dataset for analysis. Called using a free API key so all users can make calls.
+  * **OpenAI API** : This API was used for conducting complex financial analyses on the cleaned data. By prompting the API, I was able to generate insights, identify trends, and categorize expenses based on historical data patterns. **Requires an OpenAI API private key to successfully retrieve the spending analysis.**
+  * **Currency Rate Conversion API** : I utilized an API to fetch _real-time currency conversion rates_. This allows the tool to convert amounts into a standard currency format, aiding in accurate financial reporting and analysis. For instance, if a transaction is in EUR, it can be converted to USD based on the latest exchange rates, ensuring a consistent dataset for analysis. Called using a free API key so all users can make calls.
 
 ### How the Ingestion and Normalization Functions Work:
 1. **Load the data**: Using pandas, the messy data is ingested
@@ -133,7 +133,7 @@ Analyzing the spending patterns...
   - **Sparse time coverage**: Only a few transactions spread across **2023–2026**, which suggests this is a partial data sample—insight on “irregular” behavior is limited without a fuller history. 
 ```
 
-## Edge Cases Considered
+### Edge Cases Considered
 - Empty input file
 - File with only header
 - File with empty lines
